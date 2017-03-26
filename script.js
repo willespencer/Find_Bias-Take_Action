@@ -32,7 +32,7 @@ var sourceNameDict = {
   "usa-today":              "USA Today"
 }
 
-var table = ["Liberal", "Leaning left", "Moderate", "Leaning right", "Conservative"];
+var table = ["Extremely Liberal", "Leaning Liberal", "Moderate", "Leaning Conservative", "Extremely Conservative"];
 var rating = 3;
 var currRow = 0;
 var actualRow = document.createElement("div");
@@ -112,7 +112,7 @@ function getData(source, sourceRate){
                 else{
                     var imgStr = "<img width = 200px src = " + array[index].urlToImage + ">";
                 }
-                var urlStr = "<a href=" + array[index].url+ ">" + array[index].title+ "</a>"
+                var urlStr = "<a href=" + array[index].url+ " target= 'blank'>" + array[index].title+ "</a>"
                 newDiv.innerHTML =  urlStr + "<br>" + imgStr + "<br>" +array[index].description + "<br>"+ "Source: " + sourceNameDict[source] + "<br><br>";
                 
                 if(currRow%3 == 0){
